@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 // Sample login logic (Replace this with your actual login logic)
                 if (username.equals("user") && password.equals("password")) {
                     showToast("Login successful!");
+
+                    Intent intent = new Intent(MainActivity.this, UserActivity.class);
+                    startActivity(intent);
+
                 } else {
                     showToast("Login failed. Invalid credentials.");
                 }
