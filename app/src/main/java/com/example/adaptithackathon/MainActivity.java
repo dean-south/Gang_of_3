@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView textView = findViewById(R.id.textView);
-        textView.setText("Hello, World!");
+        textView.setText("Fuck me!");
     }
 }
