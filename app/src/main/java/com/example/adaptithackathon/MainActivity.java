@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextUsername;
     private EditText editTextPassword;
     private Button buttonLogin;
-    private TextView textViewRegister;
+    private Button buttonRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
-        textViewRegister = findViewById(R.id.textViewRegister);
+        buttonRegister = findViewById(R.id.buttonRegister);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,12 +41,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        textViewRegister.setOnClickListener(new View.OnClickListener() {
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("Registration feature is not yet implemented.");
+                // Navigate to the RegisterActivity when "Register" is clicked
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
     private void showToast(String message) {
