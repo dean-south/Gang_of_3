@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Adapt IT Hackathon"
-include ':app'
+include(":app")
+ 
