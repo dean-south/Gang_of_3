@@ -29,12 +29,27 @@
         </activity>
 
         <activity
-            android:name=".UserActivity"
+            android:name=".RiderActivity"
             android:theme="@style/AppTheme">
         </activity>
 
         <activity
             android:name=".ScanQRActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".DriverActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".DriverReviewActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".PreviousRidesActivity"
             android:theme="@style/AppTheme">
         </activity>
 

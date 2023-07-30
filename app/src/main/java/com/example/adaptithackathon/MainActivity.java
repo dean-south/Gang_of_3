@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
@@ -26,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         buttonLogin = findViewById(R.id.buttonLogin);
         buttonRegister = findViewById(R.id.buttonRegister);
 
+        //For Testing purposes get rid of for release
+        String userType = "rider";
+
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,8 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 if (username.equals("user") && password.equals("password")) {
                     showToast("Login successful!");
 
-                    Intent intent = new Intent(MainActivity.this, UserActivity.class);
-                    startActivity(intent);
+                    if (userType.equals("rider")){
+                        Intent intent = new Intent(MainActivity.this, RiderActivity.class);
+                        startActivity(intent);
+                    }
+                    else if (userType.equals("driver")){
+                        Intent intent = new Intent(MainActivity.this, DriverActivity.class);
+                        startActivity(intent);
+                    }
+
+
 
                 } else {
                     showToast("Login failed. Invalid credentials.");

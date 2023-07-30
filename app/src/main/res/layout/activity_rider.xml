@@ -26,5 +26,15 @@
         android:layout_centerInParent="true"
         android:text="Scan QR Code"
         android:layout_below="@id/buttonGetNewTicket"
+        android:layout_marginTop="16dp"
+        />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Sign Out"
+        android:layout_alignParentBottom="true"
         />
 </RelativeLayout>

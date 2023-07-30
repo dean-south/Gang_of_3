@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".previousRides">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/pr0"
+            android:orientation="vertical"
+            android:paddingEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="No"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pr1"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/pr0"
+            android:paddingEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Name"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pr2"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/pr1"
+            android:paddingEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Starting point"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pr3"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/pr2"
+            android:paddingEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Destination"/>
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
