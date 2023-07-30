@@ -33,8 +33,8 @@ public class DriverActivity extends AppCompatActivity {
     }
 
     public void setListeners(){
-        previousRidesButton = findViewById(R.id.previousRidesButton);
-        reviewsButton = findViewById(R.id.reviewsButton);
+        previousRidesButton = findViewById(R.id.buttonPreviousRides);
+        reviewsButton = findViewById(R.id.buttonReviews);
         previousRidesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

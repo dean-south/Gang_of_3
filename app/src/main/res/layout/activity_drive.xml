@@ -6,7 +6,7 @@
     android:padding="16dp">
 
     <Button
-        android:id="@+id/previousRidesButton"
+        android:id="@+id/buttonPreviousRides"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -14,8 +14,8 @@
         />
 
     <Button
-        android:id="@+id/reviewsButton"
-        android:layout_below="@id/previousRidesButton"
+        android:id="@+id/buttonReviews"
+        android:layout_below="@id/buttonPreviousRides"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"

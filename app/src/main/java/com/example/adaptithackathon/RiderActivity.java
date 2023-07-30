@@ -1,9 +1,11 @@
 package com.example.adaptithackathon;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,13 @@ public class RiderActivity extends AppCompatActivity {
     private Button scanButton;
     private Button signOutButton;
 
+    private Button previousRidesButton;
+
+    private Button getNewTicketButton;
+
+    private TextView ticketAmount;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +48,31 @@ public class RiderActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        previousRidesButton = findViewById(R.id.buttonPreviousRides);
+
+        previousRidesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RiderActivity.this, RiderPreviousRidesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        getNewTicketButton = findViewById(R.id.buttonGetNewTicket);
+
+        getNewTicketButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RiderActivity.this, RiderGetNewTicketActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ticketAmount = findViewById(R.id.textViewTicketAmount);
+
+        //set the amount of tickets the rider has
+        ticketAmount.setText("Ticket Amount: 0");
 
     }
     private void startQRCodeScanner() {

@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    
+    <TextView
+        android:id="@+id/textViewHowManyTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How Many Tickets Do you Want?"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/decreaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onDecreaseClick"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewHowManyTickets"/>
+
+    <Button
+        android:id="@+id/increaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onIncreaseClick"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewHowManyTickets"/>
+
+    <TextView
+        android:id="@+id/numberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_toStartOf="@id/increaseButton"
+        android:layout_toEndOf="@id/decreaseButton"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_below="@id/textViewHowManyTickets"/>
+
+    <Button
+        android:id="@+id/buttonBuyTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buy Tickets"
+        android:layout_below="@id/numberTextView"
+        android:paddingTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -4,11 +4,20 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/textViewTicketAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        />
     <Button
         android:id="@+id/buttonPreviousRides"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Previous Rides" />
+        android:text="Previous Rides"
+        android:layout_below="@id/textViewTicketAmount"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/buttonGetNewTicket"
