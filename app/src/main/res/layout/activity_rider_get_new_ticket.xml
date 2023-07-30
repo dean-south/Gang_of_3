@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="Buy Tickets"
         android:layout_below="@id/numberTextView"
-        android:paddingTop="16dp"/>
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/buttonBack"
