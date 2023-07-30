@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
 
                 // Sample login logic (Replace this with your actual login logic)
-                if (username.equals("user") && password.equals("password")) {
+                if (username.equals("rider") || username.equals("driver")  && password.equals("password")) {
                     showToast("Login successful!");
 
-                    if (userType.equals("rider")){
+                    if (username.equals("rider")){
                         Intent intent = new Intent(MainActivity.this, RiderActivity.class);
                         startActivity(intent);
                     }
-                    else if (userType.equals("driver")){
+                    else if (username.equals("driver")){
                         Intent intent = new Intent(MainActivity.this, DriverActivity.class);
                         startActivity(intent);
                     }

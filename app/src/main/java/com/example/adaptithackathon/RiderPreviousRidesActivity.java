@@ -1,56 +1,40 @@
 package com.example.adaptithackathon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.lang.reflect.Parameter;
+import java.util.Vector;
 
 public class RiderPreviousRidesActivity extends AppCompatActivity {
 
-    private TextView numberTextView;
-    private int currentNumber = 0;
+    private Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rider_previous_rides);
-        LinearLayout mainLayout = new LinearLayout(this);
-        mainLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        ));
-        mainLayout.setOrientation(LinearLayout.HORIZONTAL);
-        mainLayout.setGravity(Gravity.CENTER);
 
-        TextView driver = new TextView(this);
-        TextView rating = new TextView(this);
-        TextView comment = new TextView(this);
+        backButton.findViewById(R.id.buttonBack);
 
-        driver.setText("Baby");
-        rating.setText("3.141");
-        comment.setText("Had a nice butt but didn't smile");
-
-        mainLayout.addView(driver);
-        mainLayout.addView(rating);
-        mainLayout.addView(comment);
-
-        TextView t = mainLayout.findViewById(0);
-
-        setContentView(mainLayout);
-
-        // Set OnClickListener on the LinearLayout to show the popup
-        mainLayout.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                showPopup();
+            public void onClick(View view) {
+                Intent intent = new Intent(RiderPreviousRidesActivity.this, RiderActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
     private void showPopup() {

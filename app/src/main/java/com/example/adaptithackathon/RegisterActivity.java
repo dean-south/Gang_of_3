@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -14,6 +17,9 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText editTextPassword;
     // Add other EditText fields for Name, Surname, and Cell Phone Number if needed
     private Button buttonRegister;
+
+    private String selectedRole;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +49,20 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Spinner spinner = findViewById(R.id.spinnerRole);
+
+        // Define the array of options
+        String[] roles = {"Rider", "Driver"};
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, roles);
+
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
     }
 }
