@@ -6,12 +6,12 @@
     android:padding="16dp">
 
     <Button
-        android:layout_centerVertical="true"
         android:id="@+id/previousRidesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Previous Rides" />
+        android:text="Previous Rides"
+        />
 
     <Button
         android:id="@+id/reviewsButton"
@@ -20,5 +20,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Reviews" />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Sign Out"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>

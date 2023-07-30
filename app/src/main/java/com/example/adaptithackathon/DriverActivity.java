@@ -12,11 +12,23 @@ public class DriverActivity extends AppCompatActivity {
     private Button previousRidesButton;
     private Button reviewsButton;
 
+    private Button signOutButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drive);
         setListeners();
+
+        signOutButton = findViewById(R.id.buttonSignOut);
+
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DriverActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -47,7 +59,7 @@ public class DriverActivity extends AppCompatActivity {
     }
 
     public void openPreviousRides(){
-        Intent intent = new Intent(getApplicationContext(), PreviousRidesActivity.class);
+        Intent intent = new Intent(getApplicationContext(), DriverPreviousRidesActivity.class);
         startActivity(intent);
     }
 

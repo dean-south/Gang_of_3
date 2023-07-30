@@ -3,25 +3,39 @@ package com.example.adaptithackathon;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class PreviousRidesActivity extends AppCompatActivity {
+public class DriverPreviousRidesActivity extends AppCompatActivity {
 
     LinearLayout prLayout1;
     LinearLayout prLayout2;
     LinearLayout prLayout3;
     LinearLayout prLayout0;
 
-
+    private Button backButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_previous_rides);
+        setContentView(R.layout.activity_driver_previous_rides);
         fill();
+
+        backButton = findViewById(R.id.buttonBack);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DriverPreviousRidesActivity.this, DriverActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void fill(){
